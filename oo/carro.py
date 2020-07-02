@@ -66,7 +66,7 @@ A Direção terá a responsabilidade de controlar a direção. Ela oferece os se
     >>> direcao.girar_a_esquerda()
     >>> direcao.valor
     'Leste'
-    >>> direcao.girar_a_direita()
+    >>> direcao.girar_a_esquerda()
     >>> direcao.valor
     'Norte'
     >>> carro = Carro(direção, motor)
@@ -114,6 +114,7 @@ class Direcao:
 
     def girar_a_esquerda(self):
         self.valor = self.rotacao_a_esquerda_dct[self.valor]
+
 
 class Motor:
     def __init__(self):
