@@ -1,5 +1,7 @@
 class Pessoa:
+
     olhos = 2
+
     def __init__(self, *filhos, nome=None, idade=31):
         self.idade = idade
         self.nome = nome
@@ -7,6 +9,14 @@ class Pessoa:
 
     def cumprimentar(self):
         return f'Olá {id(self)}'
+
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
 
 
 if __name__ == '__main__':
@@ -30,3 +40,5 @@ if __name__ == '__main__':
     print(evanilson.olhos)
     print(dylan.olhos)
     print(id(Pessoa.olhos), id(evanilson.olhos), id(dylan.olhos),)
+    print(Pessoa.metodo_estatico(), evanilson.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(), evanilson.nome_e_atributos_de_classe())
