@@ -57,11 +57,11 @@ class Ator():
 
 
 class Obstaculo(Ator):
-    pass
+    _caracter_ativo = 'O'
 
 
 class Porco(Ator):
-    pass
+    _caracter_ativo = '@'
 
 
 class DuploLancamentoExcecao(Exception):
@@ -86,6 +86,7 @@ class Passaro(Ator):
         self._y_inicial = y
         self._tempo_de_lancamento = None
         self._angulo_de_lancamento = None  # radianos
+
 
     def foi_lancado(self):
         """
@@ -137,4 +138,4 @@ class PassaroAmarelo(Passaro):
 
 
 class PassaroVermelho(Passaro):
-    pass
+    _caracter_ativo = 'V'
