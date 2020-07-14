@@ -88,7 +88,7 @@ class Fase():
 
         Se não houver esse tipo de pássaro, não deve fazer nada
 
-        :param angulo: ângulo de lançamento
+        :param angulo: ângulo de lançamento%
         :param tempo: Tempo de lançamento
         """
         for passaro in self._passaros:
